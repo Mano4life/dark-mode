@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dark_light_button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>dark/light mode</h1>
+
+    <button class="toggle-btn">
+        <span class="circle"><i class="icon fas fa-sun"></i></span>
+    </button>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos error alias doloremque vero debitis minus voluptas id voluptates explicabo, aliquid officia reprehenderit aperiam, ipsam ratione reiciendis deserunt facilis! Nisi iste labore illum quidem ea quasi incidunt invento.</p>
+
+
+
+
+
+
+    <script>
+
+        document.querySelector(".toggle-btn").addEventListener("click", () =>{
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")){
+                document.querySelector(".icon").classList.remove("fa-sun");
+                document.querySelector(".icon").classList.add("fa-moon");
+            }
+            else{
+                document.querySelector(".icon").classList.remove("fa-moon");
+                document.querySelector(".icon").classList.add("fa-sun");
+            }
+        });
+
+        
+
+    </script>
+</body>
+</html>
